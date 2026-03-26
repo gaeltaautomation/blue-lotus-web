@@ -584,29 +584,9 @@ footer{
 /* ============================================================
    RESPONSIVE
    ============================================================ */
-@media(max-width:1100px){
-  .room-card:nth-child(1),.room-card:nth-child(2){grid-column:span 6}
-  .room-card:nth-child(3),.room-card:nth-child(4),.room-card:nth-child(5){grid-column:span 6}
-  .location-inner{grid-template-columns:1fr}
-  .location-map{height:320px;position:static}
-  .contact-inner{grid-template-columns:1fr}
-}
-@media(max-width:768px){
-  .amenities-grid{grid-template-columns:repeat(2,1fr)!important}
-  :root{--sp:3.5rem 1.25rem}
-  .nav-links,.nav-cta{display:none!important}
-  .nav-hamburger{display:flex}
-  .rooms-grid{display:flex;flex-direction:column}
-  .room-card:nth-child(n){grid-column:auto}
-  .why-grid{grid-template-columns:repeat(4,1fr);align-items:flex-start}
-  .booking-perks{flex-direction:column;gap:.875rem}
-}
-@media(max-width:480px){
-  .hero h1{font-size:2.4rem}
-  .hero-actions{flex-direction:column;align-items:flex-start}
-  .reviews-grid{grid-template-columns:1fr}
-  .checkin-grid{grid-template-columns:1fr 1fr}
-}
+
+
+
 
 /* ============================================================
    AMENITIES — updated
@@ -702,17 +682,7 @@ footer{
 /* ============================================================
    CHECKIN NOTICES
    ============================================================ */
-@media(max-width:768px){
-  .nav-pill{padding:0.4rem 0.4rem 0.4rem 0.75rem}
-  .nav-links{display:none}
-  .nav-cta{display:none}
-  .nav-hamburger{display:flex}
-  .bar-inner{grid-template-columns:1fr}
-  .bar-visual{display:none}
-  .bar-body{grid-template-columns:1fr}
-  .bar-photo-wrap{min-height:240px;max-height:300px}
-  .why-grid{grid-template-columns:1fr 1fr}
-}
+
 
 
 /* ============================================================
@@ -823,15 +793,8 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--teal);outline-offse
 /* ============================================================
    RESPONSIVE — Bar + Location
    ============================================================ */
-@media(max-width:900px){
-  .bar-body{grid-template-columns:1fr}
-  .loc-grid{grid-template-columns:1fr}
-  .location-inner{grid-template-columns:1fr}
-  .location-map{position:static;height:320px}
-}
-@media(max-width:600px){
-  .bar-facts{gap:1rem}
-}
+
+
 
 
 /* ============================================================
@@ -903,17 +866,8 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--teal);outline-offse
 /* ============================================================
    RESPONSIVE — Footer
    ============================================================ */
-@media(max-width:1024px){
-  .footer-grid{grid-template-columns:1fr 1fr;gap:2rem}
-  .footer-brand{grid-column:1/-1}
-}
-@media(max-width:640px){
-  .footer-grid{grid-template-columns:1fr}
-  .footer-brand{grid-column:auto}
-  .footer-top{padding:2.5rem 0 2rem}
-  .bar-photo-wrap{min-height:200px;max-height:280px}
-  .bar-photo-placeholder{min-height:200px}
-}
+
+
 
 
 /* ============================================================
@@ -940,13 +894,120 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--teal);outline-offse
 
 /* Amenity no-parties item */
 .amenity-item--note .amenity-icon{color:rgba(239,68,68,.7)}
-@media(max-width:900px){
-  .hero-inner{grid-template-columns:1fr;gap:2.5rem}
-  .hero-text-col{order:-1}
-  .hero-frame{aspect-ratio:16/9}
-  .hero-rating-badge{bottom:-.25rem}
+
+
+/* ============================================================
+   RESPONSIVE — kompletný systém (mobile-first breakpoints)
+   1280px+ : desktop (base styles)
+   1100px  : wide tablet / small desktop
+   900px   : tablet landscape / hero stack
+   768px   : tablet portrait
+   600px   : large mobile
+   480px   : mobile
+   380px   : small mobile
+   ============================================================ */
+
+/* ── 1100px — small desktop ─────────────────────────────── */
+@media(max-width:1100px){
+  .room-card:nth-child(1),.room-card:nth-child(2){grid-column:span 6}
+  .room-card:nth-child(3),.room-card:nth-child(4),.room-card:nth-child(5){grid-column:span 6}
+  .location-inner{grid-template-columns:1fr}
+  .location-map{height:320px;position:static}
+  .contact-inner{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:2rem}
+  .footer-brand{grid-column:1/-1}
 }
+
+/* ── 1024px — tablet landscape ──────────────────────────── */
+@media(max-width:1024px){
+  .hero-inner{gap:2.5rem}
+  .why-grid{grid-template-columns:repeat(2,1fr)}
+}
+
+/* ── 900px — hero stack + bar ───────────────────────────── */
+@media(max-width:900px){
+  .hero-inner{grid-template-columns:1fr;gap:2rem}
+  .hero-text-col{order:-1}
+  .hero-frame{aspect-ratio:16/9;max-height:360px}
+  .hero-rating-badge{bottom:-.25rem}
+  .hero-price-row{gap:.75rem;padding:.875rem 1rem}
+  .hero-price-val{font-size:1.3rem}
+  .bar-body{grid-template-columns:1fr}
+  .bar-photo-wrap{min-height:240px}
+  .loc-grid{grid-template-columns:1fr}
+  .location-inner{grid-template-columns:1fr}
+  .location-map{position:static;height:320px}
+}
+
+/* ── 768px — tablet portrait ─────────────────────────────── */
+@media(max-width:768px){
+  :root{--sp:3.5rem 1.25rem}
+
+  /* Nav pill */
+  .nav{padding:.875rem 1rem}
+  .nav-pill{padding:.4rem .4rem .4rem .75rem}
+  .nav-links{display:none}
+  .nav-cta{display:none}
+  .nav-hamburger{display:flex}
+
+  /* Grids */
+  .amenities-grid{grid-template-columns:repeat(2,1fr)}
+  .why-grid{grid-template-columns:repeat(2,1fr)}
+  .rooms-grid{display:flex;flex-direction:column}
+  .room-card:nth-child(n){grid-column:auto}
+  .bar-inner{grid-template-columns:1fr}
+  .bar-visual{display:none}
+  .bar-body{grid-template-columns:1fr}
+
+  /* Booking */
+  .booking-perks{flex-direction:column;gap:.875rem}
+}
+
+/* ── 640px — large mobile ────────────────────────────────── */
+@media(max-width:640px){
+  .footer-grid{grid-template-columns:1fr}
+  .footer-brand{grid-column:auto}
+  .footer-top{padding:2.5rem 0 2rem}
+  .bar-photo-wrap{min-height:200px}
+  .bar-photo-placeholder{min-height:200px}
+  .score-strip{flex-wrap:wrap;gap:1rem}
+  .reviews-grid{grid-template-columns:1fr}
+}
+
+/* ── 480px — mobile ──────────────────────────────────────── */
 @media(max-width:480px){
-  .hero{padding:5.5rem 1.25rem 3rem}
-  .hero-frame{aspect-ratio:4/3}
+  .hero{padding:5rem 1.25rem 2.5rem}
+  .hero h1{font-size:2.2rem}
+  .hero-frame{aspect-ratio:4/3;max-height:280px}
+  .hero-actions{flex-direction:column;align-items:flex-start}
+  .hero-price-row{flex-wrap:wrap;gap:.6rem}
+  .hero-price-divider{display:none}
+  .hero-price-item{flex:1 1 auto;min-width:calc(33% - .6rem)}
+  .hero-trust-row{gap:.5rem}
+  .hero-trust-item{font-size:.65rem}
+
+  .why-grid{grid-template-columns:repeat(2,1fr)}
+  .amenities-grid{grid-template-columns:repeat(2,1fr)}
+  .checkin-grid{grid-template-columns:1fr}
+  .form-row{grid-template-columns:1fr}
+  .contact-inner{gap:2rem}
+
+  .section-title{font-size:clamp(1.6rem,5vw,2.2rem)}
+}
+
+/* ── 380px — small mobile ────────────────────────────────── */
+@media(max-width:380px){
+  .nav-pill{padding:.35rem .35rem .35rem .6rem}
+  .nav-logo-link img{height:28px}
+
+  .hero h1{font-size:1.9rem}
+  .hero-price-row{gap:.5rem;padding:.75rem .875rem}
+  .hero-price-val{font-size:1.1rem}
+  .hero-price-item{min-width:calc(33% - .5rem)}
+
+  .amenities-grid{grid-template-columns:1fr}
+  .why-grid{grid-template-columns:1fr}
+
+  .btn-primary{font-size:.78rem;padding:.85rem 1.4rem}
+  .nav-cta{font-size:.68rem;padding:.5rem 1rem}
 }
