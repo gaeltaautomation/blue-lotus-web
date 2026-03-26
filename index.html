@@ -26,7 +26,7 @@
 <nav class="nav" id="mainNav">
   <div class="nav-logo">
     <a href="#hero">
-      <img src="https://gaelta.com/wp-content/uploads/fluentform/ff-296ecdcd58cb4068286f242b80f9f383-ff-IMG_5682.jpeg" alt="Blue Lotus Apartments">
+      <img src="https://blue-lotus.sk/photos/blue-lotus-apartments-logo.png" alt="Blue Lotus Apartments">
     </a>
   </div>
   <ul class="nav-links">
@@ -66,56 +66,34 @@
      HERO
      ============================================================ -->
 <section class="hero" id="hero" aria-labelledby="hero-heading">
-  <div class="hero-img-placeholder">
-    <!-- REPLACE WITH: <img class="hero-img" src="your-hero-photo.jpg" alt="Blue Lotus Apartments Bratislava"> -->
-  </div>
+  <div class="hero-img-placeholder" aria-hidden="true"></div>
   <div class="hero-overlay"></div>
-  <!-- Decorative lotus SVG -->
-  <svg class="hero-deco" viewBox="0 0 300 280" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <ellipse cx="150" cy="100" rx="60" ry="90" fill="none" stroke="white" stroke-width="2"/>
-    <ellipse cx="90" cy="130" rx="50" ry="80" fill="none" stroke="white" stroke-width="2" transform="rotate(-30 90 130)"/>
-    <ellipse cx="210" cy="130" rx="50" ry="80" fill="none" stroke="white" stroke-width="2" transform="rotate(30 210 130)"/>
-    <ellipse cx="50" cy="170" rx="40" ry="65" fill="none" stroke="white" stroke-width="1.5" transform="rotate(-55 50 170)"/>
-    <ellipse cx="250" cy="170" rx="40" ry="65" fill="none" stroke="white" stroke-width="1.5" transform="rotate(55 250 170)"/>
-    <line x1="150" y1="200" x2="150" y2="270" stroke="white" stroke-width="2"/>
-    <line x1="150" y1="270" x2="80" y2="270" stroke="white" stroke-width="1.5"/>
-    <line x1="150" y1="270" x2="220" y2="270" stroke="white" stroke-width="1.5"/>
-  </svg>
-
-  <div class="hero-content">
-    <div class="hero-tag" aria-hidden="true">
-      Bratislava · Staré Mesto · 3★ Apartmány
+  <div class="hero-inner" id="main-content">
+    <div class="hero-photo-col">
+      <div class="hero-frame">
+        <img src="https://blue-lotus.sk/photos/interier-spolocne-priestory.jpg" alt="Blue Lotus Apartments — spoločné priestory" loading="eager">
       </div>
-    <h1>
-      Bratislava, ako ju<br><em>málokto zažije.</em>
-      </span>
-    </h1>
-    <p class="hero-sub">
-      Historické centrum na dosah pešo. Komfort, ktorý zostane v pamäti.
-      </p>
-    <div class="hero-actions">
-      <a href="#booking" class="btn-primary">
-        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-        Skontrolovať dostupnosť
+      <div class="hero-rating-badge" aria-label="Hodnotenie polohy 8.7 z 10 na Booking.com, 773 hodnotení">
+        <div class="hero-rating-score">8.7<span style="font-size:1rem;color:rgba(255,255,255,.4)">/10</span></div>
+        <div class="hero-rating-meta">
+          <span class="hero-rating-label">Poloha · Booking.com</span>
+          <span class="hero-rating-count">773 hodnotení</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-text-col">
+      <div class="hero-tag" aria-hidden="true">Bratislava · Staré Mesto · 3★ Apartmány</div>
+      <h1 id="hero-heading">Bratislava, ako ju<br><em>málokto zažije.</em></h1>
+      <p class="hero-sub">Historické centrum na dosah pešo. Komfort, ktorý zostane v pamäti.</p>
+      <div class="hero-actions">
+        <a href="#booking" class="btn-primary">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          Skontrolovať dostupnosť
         </a>
-      <span class="hero-micro">
-        Priama rezervácia = najlepšia cena
-        </span>
+        <span class="hero-micro">Priama rezervácia = najlepšia cena</span>
+      </div>
     </div>
   </div>
-
-  <!-- Stats badge -->
-  <div class="hero-stats" aria-hidden="true">
-    <div class="hero-stat">
-      <span class="hero-stat-num">8.7</span>
-      <span class="hero-stat-label">Poloha · Booking.com</span>
-      </div>
-    <div class="hero-stat">
-      <span class="hero-stat-num">773</span>
-      <span class="hero-stat-label">Hodnotení</span>
-      </div>
-  </div>
-
   <div class="hero-scroll-line" aria-hidden="true"></div>
 </section>
 
@@ -181,7 +159,7 @@
       <!-- DELUXE — Most Booked -->
       <div class="room-card reveal">
         <div class="room-card-img r2">
-          <!-- <img src="photos/deluxe.jpg" alt="Izba Deluxe"> -->
+          <img src="https://blue-lotus.sk/photos/izba-deluxe.jpg" alt="Izba Deluxe" loading="lazy">
           <span class="room-badge badge-hot">
             🔥 Najpopulárnejšia
             </span>
@@ -204,7 +182,7 @@
       <!-- RODINNÁ SUITA — Best Room -->
       <div class="room-card reveal reveal-d1">
         <div class="room-card-img r3">
-          <!-- <img src="photos/suite.jpg" alt="Rodinná suita Deluxe"> -->
+          <img src="https://blue-lotus.sk/photos/suita-deluxe.jpg" alt="Rodinná suita Deluxe" loading="lazy">
           <span class="room-badge badge-best">
             ✨ Najlepšia izba
             </span>
@@ -228,7 +206,7 @@
       <!-- STANDARD -->
       <div class="room-card reveal">
         <div class="room-card-img r1">
-          <!-- <img src="photos/standard.jpg" alt="Izba Standard"> -->
+          <img src="https://blue-lotus.sk/photos/standard-room.jpg" alt="Izba Standard" loading="lazy">
         </div>
         <div class="room-body">
           <span class="room-size">15 m²</span>
@@ -248,7 +226,7 @@
       <!-- SINGLE -->
       <div class="room-card reveal reveal-d1">
         <div class="room-card-img r4">
-          <!-- <img src="photos/single.jpg" alt="Jednolôžková izba"> -->
+          <img src="https://blue-lotus.sk/photos/single-room.jpg" alt="Jednolôžková izba" loading="lazy">
         </div>
         <div class="room-body">
           <span class="room-size">7 m²</span>
@@ -267,7 +245,7 @@
       <!-- DORM -->
       <div class="room-card reveal reveal-d2">
         <div class="room-card-img r5">
-          <!-- <img src="photos/shared.jpg" alt="Zdieľaná izba"> -->
+          <img src="https://blue-lotus.sk/photos/shared-room.jpg" alt="Zdieľaná izba" loading="lazy">
         </div>
         <div class="room-body">
           <span class="room-size">83 m²</span>
@@ -387,7 +365,7 @@
               <span class="bar-event-chip">Mexický večer</span>
               <span class="bar-event-chip">Láskavé trhy</span>
             </div>
-            <a href="https://www.instagram.com/thespacebiohackingbar/" target="_blank" rel="noopener noreferrer" class="bar-ig-link" aria-label="Sledujte The Space Bar na Instagrame">
+            <a href="https://www.instagram.com/thespace_biohackingbar/" target="_blank" rel="noopener noreferrer" class="bar-ig-link" aria-label="Sledujte The Space Bar na Instagrame">
               <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
               Sledujte nás na Instagrame
             </a>
@@ -397,7 +375,7 @@
 
       <div class="bar-photo-wrap reveal" aria-label="Fotografia baru">
         <!-- BAR PHOTO — replace src with real photo -->
-        <!-- <img src="photos/bar.jpg" alt="The Space Biohacking Bar" class="bar-photo"> -->
+        <img src="https://blue-lotus.sk/photos/the-space-bar.jpg" alt="The Space Biohacking Bar" class="bar-photo">
         <div class="bar-photo-placeholder">
           <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:rgba(78,205,196,.3)"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
           <span>Fotografia baru</span>
@@ -733,7 +711,7 @@
 
         <div class="footer-brand">
           <a href="#hero" class="footer-logo-link">
-            <img src="https://gaelta.com/wp-content/uploads/fluentform/ff-296ecdcd58cb4068286f242b80f9f383-ff-IMG_5682.jpeg" alt="Blue Lotus Apartments — domov" width="48" height="48">
+            <img src="https://blue-lotus.sk/photos/blue-lotus-apartments-logo.png" alt="Blue Lotus Apartments — domov" width="64" height="64">
           </a>
           <div class="footer-brand-name">Blue Lotus<br><span>Apartments</span></div>
           <p class="footer-brand-tagline">Historické centrum Bratislavy na dosah pešo.</p>
@@ -790,7 +768,7 @@
 
   <div class="footer-bottom">
     <div class="container">
-      <span>&copy; 2026 Blue Lotus Apartments s.r.o. &middot; Všetky práva vyhradené</span>
+      <span>&copy; 2026 LbyS Invest, s. r. o. &mdash; Blue Lotus Apartments &middot; Všetky práva vyhradené</span>
       <span class="footer-credit-link">Web vytvorila <a href="https://gaelta.com" target="_blank" rel="noopener noreferrer">Gaelta</a></span>
     </div>
   </div>
