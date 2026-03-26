@@ -1057,6 +1057,10 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--teal);outline-offse
    RESPONSIVE
    ============================================================ */
 
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
 @media(max-width:1100px){
   .room-card:nth-child(1),.room-card:nth-child(2){grid-column:span 6}
   .room-card:nth-child(3),.room-card:nth-child(4),.room-card:nth-child(5){grid-column:span 6}
@@ -1074,18 +1078,14 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--teal);outline-offse
 }
 
 @media(max-width:900px){
-  /* Hero — height:auto aby foto nebola orezaná */
   .hero{
     padding:8rem 1.5rem 3rem;align-items:flex-start;
-    height:auto;min-height:100svh;overflow:visible;
+    height:100svh;overflow:hidden;
   }
-  .hero-overlay{position:fixed;pointer-events:none}
-  .hero-img-placeholder{position:fixed;pointer-events:none}
   .hero-inner{grid-template-columns:1fr;gap:1.5rem}
   .hero-text-col{order:-1}
-  .hero-frame{aspect-ratio:16/9;max-height:320px}
-  .hero-frame img{object-position:center center}
-  .hero-photo-col{padding-bottom:1.5rem}
+  /* Skryť foto col — hero je fullscreen text-only na mobile */
+  .hero-photo-col{display:none}
   .hero-rating-badge{bottom:0;left:50%;transform:translateX(-50%);padding:.5rem .875rem;gap:.6rem}
   .hero-price-row{gap:.75rem;padding:.875rem 1rem}
   .hero-price-val{font-size:1.3rem}
@@ -1135,7 +1135,6 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--teal);outline-offse
   :root{--sp:2.5rem 0}
   .hero{padding:6rem 1.25rem 2.5rem}
   .hero h1{font-size:2.1rem;line-height:1.1}
-  .hero-frame{aspect-ratio:3/2;max-height:240px}
   .hero-sub{font-size:.95rem}
   .hero-actions{flex-direction:column;align-items:stretch;gap:.75rem}
   .btn-primary{justify-content:center;padding:.9rem 1.5rem}
@@ -1186,7 +1185,6 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--teal);outline-offse
   .nav-cta-mobile{font-size:.65rem;padding:.4rem .7rem;margin-right:.3rem}
   .hero{padding:5.75rem 1rem 2rem}
   .hero h1{font-size:1.85rem}
-  .hero-frame{max-height:200px}
   .hero-price-row{flex-wrap:wrap;gap:.4rem;padding:.6rem .75rem}
   .hero-price-divider{display:none}
   .hero-price-item{flex:1 1 28%;min-width:0}
