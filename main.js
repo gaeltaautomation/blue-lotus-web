@@ -30,10 +30,12 @@
   // --- Mobile menu ---
   var hamburger = document.getElementById('hamburger');
   var mobileMenu = document.getElementById('mobileMenu');
+  var menuOverlay = document.getElementById('menuOverlay');
   var isOpen = false;
   function toggleMenu(open) {
     isOpen = typeof open !== 'undefined' ? open : !isOpen;
     mobileMenu.classList.toggle('open', isOpen);
+    if (menuOverlay) menuOverlay.classList.toggle('open', isOpen);
     hamburger.setAttribute('aria-expanded', isOpen);
     mobileMenu.setAttribute('aria-hidden', !isOpen);
     document.body.style.overflow = isOpen ? 'hidden' : '';
@@ -50,6 +52,7 @@
   mobileMenu.querySelectorAll('a').forEach(function(a) {
     a.addEventListener('click', function() { toggleMenu(false); });
   });
+  if (menuOverlay) menuOverlay.addEventListener('click', function() { toggleMenu(false); });
   
 
   // --- Scroll reveal ---
