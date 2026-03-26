@@ -52,6 +52,9 @@
   mobileMenu.querySelectorAll('a').forEach(function(a) {
     a.addEventListener('click', function() { toggleMenu(false); });
   });
+  var closeBtn = document.getElementById('mobileMenuClose');
+  if (closeBtn) closeBtn.addEventListener('click', function() { toggleMenu(false); });
+  if (menuOverlay) menuOverlay.addEventListener('click', function() { toggleMenu(false); });
   if (menuOverlay) menuOverlay.addEventListener('click', function() { toggleMenu(false); });
   
 
