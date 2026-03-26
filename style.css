@@ -124,7 +124,7 @@ button{cursor:pointer;font-family:var(--font-sans)}
    SECTION COMMONS
    ============================================================ */
 section{padding:var(--sp)}
-.container{max-width:var(--max-w);margin:0 auto}
+.container{max-width:var(--max-w);margin:0 auto;padding:0 1.5rem}
 .section-label{
   font-size:0.7rem;font-weight:700;letter-spacing:0.2em;
   text-transform:uppercase;color:var(--teal);
@@ -179,7 +179,7 @@ section{padding:var(--sp)}
   display:flex;align-items:center;gap:1rem;
   background:rgba(20,24,32,.88);backdrop-filter:blur(20px);
   border:1px solid rgba(255,255,255,.12);border-radius:100px;
-  padding:.75rem 1.5rem;white-space:nowrap;
+  padding:.6rem 1rem;white-space:nowrap;max-width:90%;
   box-shadow:0 8px 32px rgba(0,0,0,.4);z-index:2;
 }
 .hero-rating-score{
@@ -278,7 +278,7 @@ section{padding:var(--sp)}
   border:1px solid rgba(255,255,255,.06);
   background:rgba(255,255,255,.04);gap:1px;
 }
-.why-card{background:var(--dark-2);padding:2.75rem 2.25rem;transition:background var(--ease)}
+.why-card{background:var(--dark-2);padding:2rem 1.75rem;transition:background var(--ease)}
 .why-card:hover{background:var(--dark-3)}
 .why-icon{
   width:52px;height:52px;border-radius:14px;
@@ -908,6 +908,31 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--teal);outline-offse
    ============================================================ */
 
 /* ── 1100px — small desktop ─────────────────────────────── */
+
+
+/* ── 1024px — tablet landscape ──────────────────────────── */
+
+
+/* ── 900px — hero stack + bar ───────────────────────────── */
+
+
+/* ── 768px — tablet portrait ─────────────────────────────── */
+
+
+/* ── 640px — large mobile ────────────────────────────────── */
+
+
+/* ── 480px — mobile ──────────────────────────────────────── */
+
+
+/* ── 380px — small mobile ────────────────────────────────── */
+
+/* ============================================================
+   RESPONSIVE — kompletný systém
+   1100 → 1024 → 900 → 768 → 640 → 480 → 380px
+   ============================================================ */
+
+/* ── 1100px ───────────────────────────────────────────────── */
 @media(max-width:1100px){
   .room-card:nth-child(1),.room-card:nth-child(2){grid-column:span 6}
   .room-card:nth-child(3),.room-card:nth-child(4),.room-card:nth-child(5){grid-column:span 6}
@@ -918,34 +943,44 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--teal);outline-offse
   .footer-brand{grid-column:1/-1}
 }
 
-/* ── 1024px — tablet landscape ──────────────────────────── */
+/* ── 1024px ───────────────────────────────────────────────── */
 @media(max-width:1024px){
-  .hero-inner{gap:2.5rem}
+  .hero-inner{gap:2rem}
   .why-grid{grid-template-columns:repeat(2,1fr)}
+  .amenities-grid{grid-template-columns:repeat(3,1fr)}
 }
 
-/* ── 900px — hero stack + bar ───────────────────────────── */
+/* ── 900px — hero stack ───────────────────────────────────── */
 @media(max-width:900px){
-  .hero-inner{grid-template-columns:1fr;gap:2rem}
+  .hero{padding:5.5rem 1.5rem 3rem}
+  .hero-inner{grid-template-columns:1fr;gap:1.5rem}
   .hero-text-col{order:-1}
-  .hero-frame{aspect-ratio:16/9;max-height:360px}
-  .hero-rating-badge{bottom:-.25rem}
+  .hero-frame{aspect-ratio:16/9;max-height:340px}
+  .hero-photo-col{padding-bottom:1.5rem}
+  .hero-rating-badge{
+    bottom:0;left:50%;transform:translateX(-50%);
+    padding:.5rem .875rem;gap:.6rem;
+  }
+  .hero-rating-score{font-size:1.3rem}
   .hero-price-row{gap:.75rem;padding:.875rem 1rem}
   .hero-price-val{font-size:1.3rem}
+  .hero-price-divider{height:28px}
+
   .bar-body{grid-template-columns:1fr}
-  .bar-photo-wrap{min-height:240px}
+  .bar-photo-wrap{min-height:260px}
   .loc-grid{grid-template-columns:1fr}
   .location-inner{grid-template-columns:1fr}
-  .location-map{position:static;height:320px}
+  .location-map{position:static;height:300px}
+  .score-strip{gap:1.25rem;padding:1.25rem 1.5rem}
 }
 
 /* ── 768px — tablet portrait ─────────────────────────────── */
 @media(max-width:768px){
-  :root{--sp:3.5rem 1.25rem}
+  :root{--sp:3rem 1.25rem}
 
-  /* Nav pill */
-  .nav{padding:.875rem 1rem}
-  .nav-pill{padding:.4rem .4rem .4rem .75rem}
+  /* Nav */
+  .nav{padding:.75rem 1rem}
+  .nav-pill{padding:.4rem .4rem .4rem .75rem;width:100%;max-width:calc(100vw - 2rem)}
   .nav-links{display:none}
   .nav-cta{display:none}
   .nav-hamburger{display:flex}
@@ -957,57 +992,92 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--teal);outline-offse
   .room-card:nth-child(n){grid-column:auto}
   .bar-inner{grid-template-columns:1fr}
   .bar-visual{display:none}
-  .bar-body{grid-template-columns:1fr}
 
   /* Booking */
-  .booking-perks{flex-direction:column;gap:.875rem}
+  .booking-perks{flex-direction:column;gap:.75rem}
+
+  /* Score */
+  .score-strip{flex-wrap:wrap;gap:1rem;padding:1.25rem}
+  .score-big{font-size:3rem}
+
+  /* Contact */
+  .contact-inner{grid-template-columns:1fr}
 }
 
-/* ── 640px — large mobile ────────────────────────────────── */
+/* ── 640px ────────────────────────────────────────────────── */
 @media(max-width:640px){
   .footer-grid{grid-template-columns:1fr}
   .footer-brand{grid-column:auto}
   .footer-top{padding:2.5rem 0 2rem}
   .bar-photo-wrap{min-height:200px}
   .bar-photo-placeholder{min-height:200px}
-  .score-strip{flex-wrap:wrap;gap:1rem}
   .reviews-grid{grid-template-columns:1fr}
+  .amenities-grid{grid-template-columns:repeat(2,1fr)}
+  .why-grid{grid-template-columns:repeat(2,1fr)}
+  .loc-grid{grid-template-columns:1fr}
+  .checkin-grid{grid-template-columns:1fr 1fr}
 }
 
 /* ── 480px — mobile ──────────────────────────────────────── */
 @media(max-width:480px){
+  :root{--sp:2.5rem 0}
+
   .hero{padding:5rem 1.25rem 2.5rem}
-  .hero h1{font-size:2.2rem}
-  .hero-frame{aspect-ratio:4/3;max-height:280px}
-  .hero-actions{flex-direction:column;align-items:flex-start}
-  .hero-price-row{flex-wrap:wrap;gap:.6rem}
-  .hero-price-divider{display:none}
-  .hero-price-item{flex:1 1 auto;min-width:calc(33% - .6rem)}
-  .hero-trust-row{gap:.5rem}
+  .hero h1{font-size:2.1rem;line-height:1.1}
+  .hero-frame{aspect-ratio:3/2;max-height:260px}
+  .hero-sub{font-size:.95rem;margin-bottom:1.25rem}
+  .hero-actions{flex-direction:column;align-items:stretch;gap:.75rem}
+  .btn-primary{justify-content:center;padding:.9rem 1.5rem}
+  .hero-micro{text-align:center}
+
+  /* Price row — 3 items v rade ale menšie */
+  .hero-price-row{gap:.5rem;padding:.75rem .875rem}
+  .hero-price-val{font-size:1.15rem}
+  .hero-price-from{font-size:.6rem}
+  .hero-price-label{font-size:.6rem}
+  .hero-price-divider{height:24px}
+
+  /* Trust */
+  .hero-trust-row{gap:.4rem .75rem;flex-wrap:wrap}
   .hero-trust-item{font-size:.65rem}
 
+  /* Sections */
+  .section-title{font-size:clamp(1.5rem,5vw,2rem)}
+  .amenities-grid{grid-template-columns:repeat(2,1fr);gap:.75rem}
   .why-grid{grid-template-columns:repeat(2,1fr)}
-  .amenities-grid{grid-template-columns:repeat(2,1fr)}
+  .why-card{padding:1.5rem 1.25rem}
   .checkin-grid{grid-template-columns:1fr}
   .form-row{grid-template-columns:1fr}
-  .contact-inner{gap:2rem}
-
-  .section-title{font-size:clamp(1.6rem,5vw,2.2rem)}
+  .score-strip{flex-direction:column;align-items:flex-start;gap:1rem}
+  .score-big{font-size:3.5rem}
+  .score-divider{display:none}
+  .booking-perks{align-items:flex-start}
+  .container{padding:0 1rem}
 }
 
-/* ── 380px — small mobile ────────────────────────────────── */
+/* ── 380px — small mobile (iPhone SE, starší Android) ───── */
 @media(max-width:380px){
+  .nav{padding:.6rem .75rem}
   .nav-pill{padding:.35rem .35rem .35rem .6rem}
   .nav-logo-link img{height:28px}
 
-  .hero h1{font-size:1.9rem}
-  .hero-price-row{gap:.5rem;padding:.75rem .875rem}
-  .hero-price-val{font-size:1.1rem}
-  .hero-price-item{min-width:calc(33% - .5rem)}
+  .hero{padding:4.5rem 1rem 2rem}
+  .hero h1{font-size:1.85rem}
+  .hero-frame{max-height:220px}
+  .hero-price-row{flex-wrap:wrap;gap:.4rem;padding:.65rem .75rem}
+  .hero-price-item{flex:1 1 28%;min-width:0}
+  .hero-price-val{font-size:1rem}
+  .hero-price-divider{display:none}
 
   .amenities-grid{grid-template-columns:1fr}
   .why-grid{grid-template-columns:1fr}
+  .why-card{padding:1.25rem 1rem}
+  .checkin-grid{grid-template-columns:1fr}
+  .amenity-item{padding:.875rem 1rem}
 
-  .btn-primary{font-size:.78rem;padding:.85rem 1.4rem}
-  .nav-cta{font-size:.68rem;padding:.5rem 1rem}
+  .btn-primary{font-size:.78rem;padding:.85rem 1.25rem}
+  .section-title{font-size:1.5rem}
+  .container{padding:0 .875rem}
+
+  .footer-bottom-inner{flex-direction:column;gap:.75rem;text-align:center}
 }
