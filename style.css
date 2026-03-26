@@ -18,7 +18,7 @@
   --font-serif: "Playfair Display", Georgia, serif;
   --font-sans:  "DM Sans", system-ui, sans-serif;
   --max-w:      1200px;
-  --sp:         clamp(3.2rem, 6.5vw, 5.8rem) 1.5rem;
+  --sp:         clamp(2.5rem, 5vw, 4.5rem) 1.5rem;
   --r:          12px;
   --ease:       0.3s cubic-bezier(0.4,0,0.2,1);
 }
@@ -379,7 +379,7 @@ section{padding:var(--sp)}
 .location{background:var(--dark)}
 .location .section-title{color:var(--white)}
 .location .section-sub{color:rgba(255,255,255,.45)}
-.location-inner{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
+.location-inner{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;overflow:visible}
 
 
 .location-item:first-child{border-top:1px solid rgba(255,255,255,.07)}
@@ -419,7 +419,7 @@ section{padding:var(--sp)}
   font-size:.68rem;font-weight:700;letter-spacing:.15em;
   text-transform:uppercase;color:var(--teal);display:block;margin-bottom:.3rem;
 }
-.reviews-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.25rem}
+.reviews-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem}
 .review-card{
   background:var(--white);border-radius:var(--r);
   padding:2rem;border:1px solid var(--gray-light);
@@ -466,7 +466,7 @@ section{padding:var(--sp)}
 .booking-perk::before{content:"✓";color:var(--teal);font-weight:700}
 .previo-wrap{
   background:var(--white);border-radius:var(--r);
-  padding:2rem;min-height:420px;width:100%;box-sizing:border-box;overflow:hidden;
+  padding:0;min-height:420px;width:100%;box-sizing:border-box;overflow:hidden;
 }
 .booking-help{
   margin-top:.75rem;text-align:center;
@@ -1027,6 +1027,10 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--teal);outline-offse
    RESPONSIVE
    ============================================================ */
 
+/* ============================================================
+   RESPONSIVE — 1100 → 1024 → 900 → 768 → 640 → 480 → 380px
+   ============================================================ */
+
 @media(max-width:1100px){
   .room-card:nth-child(1),.room-card:nth-child(2){grid-column:span 6}
   .room-card:nth-child(3),.room-card:nth-child(4),.room-card:nth-child(5){grid-column:span 6}
@@ -1040,6 +1044,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--teal);outline-offse
 @media(max-width:1024px){
   .why-grid{grid-template-columns:repeat(2,1fr)}
   .amenities-grid{grid-template-columns:repeat(3,1fr)}
+  .reviews-grid{grid-template-columns:repeat(2,1fr)}
 }
 
 @media(max-width:900px){
@@ -1081,6 +1086,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--teal);outline-offse
   .nav-hamburger{display:flex}
   .amenities-grid{grid-template-columns:repeat(2,1fr)}
   .why-grid{grid-template-columns:repeat(2,1fr)}
+  .reviews-grid{grid-template-columns:repeat(2,1fr)}
   .rooms-grid{display:flex;flex-direction:column}
   .room-card:nth-child(n){grid-column:auto}
   .bar-inner{grid-template-columns:1fr}
@@ -1127,16 +1133,15 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--teal);outline-offse
   .amenity-label{font-size:.75rem}
   .amenity-desc{font-size:.67rem;line-height:1.4}
   .amenity-icon{width:36px;height:36px;flex-shrink:0}
-  /* Booking — nulový whitespace */
+  /* Booking mobile — bez whitespace */
   .booking .container{padding-left:0;padding-right:0;max-width:100%}
   .booking .section-header{padding:0 1rem}
   .booking-perks{padding:0 1rem}
   .booking-help{margin-top:.5rem;padding:0 1rem}
-  .previo-wrap{border-radius:0;padding:0;margin:0}
-  /* Contact */
-  .contact-form-headline{font-size:1.4rem;margin-bottom:.5rem}
-  .contact-section .section-header{margin-bottom:.75rem}
+  .previo-wrap{border-radius:0;margin:0}
   .form-row{grid-template-columns:1fr}
+  .contact-form-headline{font-size:1.4rem;margin-bottom:.5rem}
+  .contact .section-header{margin-bottom:.5rem}
   .score-strip{flex-direction:column;align-items:flex-start;gap:1rem}
   .score-big{font-size:3.5rem}
   .score-divider{display:none}
