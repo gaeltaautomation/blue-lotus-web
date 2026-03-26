@@ -469,7 +469,7 @@ section{padding:var(--sp)}
   padding:2rem;min-height:420px;width:100%;box-sizing:border-box;overflow:hidden;
 }
 .booking-help{
-  margin-top:1.75rem;text-align:center;
+  margin-top:.75rem;text-align:center;
   font-size:.8rem;color:rgba(255,255,255,.35);
 }
 .booking-help a{color:var(--gold);transition:color var(--ease)}
@@ -678,7 +678,7 @@ footer{
 
 .footer-langs-label{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-right:.25rem}
 .lang-pill{
-  font-size:.72rem;font-weight:600;padding:.25rem .65rem;
+  font-size:.65rem;font-weight:600;padding:.2rem .5rem;
   border-radius:100px;background:rgba(255,255,255,.06);
   border:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.55);
 }
@@ -844,8 +844,8 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--teal);outline-offse
 }
 .footer-brand-name span{font-weight:300;font-size:.9rem;opacity:.7}
 .footer-brand-tagline{font-size:.78rem;color:rgba(255,255,255,.4);margin-bottom:1.25rem;line-height:1.6}
-.footer-langs{display:flex;align-items:center;gap:.35rem;flex-wrap:nowrap}
-.footer-langs-label{font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-right:.15rem}
+.footer-langs{display:flex;align-items:center;gap:.3rem;flex-wrap:nowrap}
+.footer-langs-label{font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-right:.1rem}
 .lang-pill{font-size:.7rem;font-weight:600;padding:.2rem .55rem;border-radius:100px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.5)}
 .footer-col{}
 .footer-col-label{
@@ -965,7 +965,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--teal);outline-offse
 /* Contact form headline */
 .contact-form-headline{
   font-family:var(--font-serif);font-size:1.75rem;font-weight:300;
-  color:var(--dark);margin-bottom:1.5rem;line-height:1.2;
+  color:var(--dark);margin-bottom:.75rem;line-height:1.2;
 }
 /* Mobile lang switcher */
 .mobile-menu-langs{
@@ -1021,6 +1021,10 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--teal);outline-offse
 
 /* ============================================================
    RESPONSIVE — 1100 → 1024 → 900 → 768 → 640 → 480 → 380px
+   ============================================================ */
+
+/* ============================================================
+   RESPONSIVE
    ============================================================ */
 
 @media(max-width:1100px){
@@ -1094,9 +1098,9 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--teal);outline-offse
   .bar-photo-wrap,.bar-photo-placeholder{min-height:200px}
   .reviews-grid{grid-template-columns:1fr}
   .loc-grid{grid-template-columns:1fr}
-  /* Footer brand full width, langs nowrap */
-  .footer-langs{flex-wrap:nowrap;font-size:.6rem}
-  .lang-pill{font-size:.65rem;padding:.2rem .4rem}
+  .footer-langs{flex-wrap:nowrap}
+  .lang-pill{font-size:.6rem;padding:.15rem .4rem}
+  .footer-langs-label{font-size:.55rem}
 }
 
 @media(max-width:480px){
@@ -1114,42 +1118,39 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--teal);outline-offse
   .hero-price-divider{height:22px}
   .hero-trust-row{gap:.4rem .6rem;flex-wrap:wrap}
   .hero-trust-item{font-size:.65rem}
-  /* Why */
   .why-grid{grid-template-columns:repeat(2,1fr);align-items:stretch}
   .why-card{padding:1.4rem 1rem}
   .why-card h3{font-size:.88rem}
   .why-card p{font-size:.78rem}
-  /* Amenities */
   .amenities-grid{grid-template-columns:repeat(2,1fr);gap:.6rem;align-items:stretch}
   .amenity-item{padding:.875rem .75rem;gap:.6rem}
   .amenity-label{font-size:.75rem}
   .amenity-desc{font-size:.67rem;line-height:1.4}
   .amenity-icon{width:36px;height:36px;flex-shrink:0}
-  /* Booking — nulový whitespace okolo Previo */
+  /* Booking — nulový whitespace */
   .booking .container{padding-left:0;padding-right:0;max-width:100%}
   .booking .section-header{padding:0 1rem}
   .booking-perks{padding:0 1rem}
-  .booking-help{padding:0 1rem}
+  .booking-help{margin-top:.5rem;padding:0 1rem}
   .previo-wrap{border-radius:0;padding:0;margin:0}
-  /* Forms */
+  /* Contact */
+  .contact-form-headline{font-size:1.4rem;margin-bottom:.5rem}
+  .contact-section .section-header{margin-bottom:.75rem}
   .form-row{grid-template-columns:1fr}
-  .contact-form-headline{font-size:1.5rem}
-  /* Score */
   .score-strip{flex-direction:column;align-items:flex-start;gap:1rem}
   .score-big{font-size:3.5rem}
   .score-divider{display:none}
   .checkin-grid{grid-template-columns:1fr}
   .section-title{font-size:clamp(1.5rem,5vw,2rem)}
   .container{padding:0 1rem}
-  /* OTA logos mobile */
   .ota-logos{gap:1.25rem}
   .ota-img{height:18px;max-width:90px}
-  /* Footer */
   .footer-grid{grid-template-columns:1fr}
   .footer-brand{width:100%;overflow:visible}
   .footer-logo-link img{width:56px;height:56px}
-  .footer-langs{flex-wrap:nowrap;gap:.3rem}
-  .lang-pill{font-size:.62rem;padding:.18rem .35rem}
+  .footer-langs{flex-wrap:nowrap;gap:.25rem}
+  .lang-pill{font-size:.58rem;padding:.12rem .35rem}
+  .footer-langs-label{font-size:.52rem;white-space:nowrap}
 }
 
 @media(max-width:380px){
@@ -1172,4 +1173,5 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--teal);outline-offse
   .section-title{font-size:1.4rem}
   .container{padding:0 .875rem}
   .footer-bottom-inner{flex-direction:column;gap:.75rem;text-align:center}
+  .lang-pill{font-size:.55rem;padding:.1rem .3rem}
 }
