@@ -37,6 +37,7 @@
       <li><a href="#contact">Kontakt</a></li>
     </ul>
     <a href="#booking" class="nav-cta">Rezervovať</a>
+    <a href="#booking" class="nav-cta-mobile">Rezervovať</a>
     <button class="nav-hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -46,20 +47,16 @@
 <!-- Mobile menu -->
 <div class="mobile-menu-overlay" id="menuOverlay"></div>
 <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Zavrieť menu">
+    <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
   <a href="#rooms" class="mobile-menu-link">Izby</a>
   <a href="#amenities" class="mobile-menu-link">Vybavenie</a>
   <a href="#bar" class="mobile-menu-link">The Space Bar</a>
   <a href="#location" class="mobile-menu-link">Poloha</a>
   <a href="#reviews" class="mobile-menu-link">Hodnotenia</a>
   <a href="#contact" class="mobile-menu-link">Kontakt</a>
-  <a href="#booking" class="mobile-menu-cta">
-    Rezervovať priamo
-    </a>
-  <div class="mobile-menu-langs">
-    <a href="#" class="mobile-lang-btn active" data-lang="sk">SK</a>
-    <a href="#" class="mobile-lang-btn" data-lang="en">EN</a>
-    <a href="#" class="mobile-lang-btn" data-lang="ua">UA</a>
-  </div>
+  <a href="#booking" class="mobile-menu-cta">Rezervovať priamo</a>
 </div>
 
 <!-- ============================================================
@@ -604,11 +601,21 @@
     <div class="ota-strip reveal">
       <span class="ota-label">Nájdete nás aj na</span>
       <div class="ota-logos">
-        <span class="ota-logo">Booking.com</span>
-        <span class="ota-logo">Expedia</span>
-        <span class="ota-logo">Airbnb</span>
-        <span class="ota-logo">Agoda</span>
-        <span class="ota-logo">Trip.com</span>
+        <a href="https://www.booking.com/hotel/sk/blue-lotus-apartments.sk.html" target="_blank" rel="noopener" class="ota-logo-link" aria-label="Booking.com">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Booking.com_logo_%282022%29.svg/320px-Booking.com_logo_%282022%29.svg.png" alt="Booking.com" class="ota-img" loading="lazy">
+        </a>
+        <a href="https://www.expedia.com" target="_blank" rel="noopener" class="ota-logo-link" aria-label="Expedia">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Expedia_logo.svg/320px-Expedia_logo.svg.png" alt="Expedia" class="ota-img" loading="lazy">
+        </a>
+        <a href="https://www.airbnb.com" target="_blank" rel="noopener" class="ota-logo-link" aria-label="Airbnb">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Airbnb_Logo_B%C3%A9lo.svg/320px-Airbnb_Logo_B%C3%A9lo.svg.png" alt="Airbnb" class="ota-img" loading="lazy">
+        </a>
+        <a href="https://www.agoda.com" target="_blank" rel="noopener" class="ota-logo-link" aria-label="Agoda">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Agoda_transparent_logo.svg/320px-Agoda_transparent_logo.svg.png" alt="Agoda" class="ota-img" loading="lazy">
+        </a>
+        <a href="https://www.trip.com" target="_blank" rel="noopener" class="ota-logo-link" aria-label="Trip.com">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Trip.com_Logo.svg/320px-Trip.com_Logo.svg.png" alt="Trip.com" class="ota-img" loading="lazy">
+        </a>
       </div>
     </div>
   </div>
@@ -754,11 +761,10 @@
           <p class="footer-brand-tagline">Historické centrum Bratislavy na dosah pešo.</p>
           <div class="footer-langs">
             <span class="footer-langs-label">Hovoríme:</span>
-            <span class="lang-pill">🇸🇰 SK</span>
             <span class="lang-pill">🇬🇧 EN</span>
             <span class="lang-pill">🇨🇿 CZ</span>
             <span class="lang-pill">🇷🇺 RU</span>
-            <span class="lang-pill">🇺🇦 UK</span>
+            <span class="lang-pill">🇺🇦 UA</span>
           </div>
         </div>
 
