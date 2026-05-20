@@ -55,11 +55,16 @@
   var closeBtn = document.getElementById('mobileMenuClose');
   if (closeBtn) closeBtn.addEventListener('click', function() { toggleMenu(false); });
   if (menuOverlay) menuOverlay.addEventListener('click', function() { toggleMenu(false); });
-  if (menuOverlay) menuOverlay.addEventListener('click', function() { toggleMenu(false); });
-  
 
   // --- Scroll reveal ---
   var reveals = document.querySelectorAll('.reveal');
+
+  // Immediately show elements that are already in viewport on load
+  function checkVisible(el) {
+    var rect = el.getBoundingClientRect();
+    return rect.top < window.innerHeight && rect.bottom > 0;
+  }
+
   if ('IntersectionObserver' in window) {
     var observer = new IntersectionObserver(function(entries) {
       entries.forEach(function(entry) {
@@ -68,11 +73,25 @@
           observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
-    reveals.forEach(function(el) { observer.observe(el); });
+    }, { threshold: 0.05, rootMargin: '0px 0px -20px 0px' });
+    reveals.forEach(function(el) {
+      // Show immediately if already visible
+      if (checkVisible(el)) {
+        el.classList.add('visible');
+      } else {
+        observer.observe(el);
+      }
+    });
   } else {
     reveals.forEach(function(el) { el.classList.add('visible'); });
   }
+
+  // Extra safety: after 600ms force-show anything still hidden in viewport
+  setTimeout(function() {
+    document.querySelectorAll('.reveal:not(.visible)').forEach(function(el) {
+      if (checkVisible(el)) el.classList.add('visible');
+    });
+  }, 600);
 
   // --- Smooth scroll ---
   document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
