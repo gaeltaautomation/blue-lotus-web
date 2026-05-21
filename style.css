@@ -22,7 +22,7 @@
   --gold:        #B8893A;
   --gold-light:  #F5EDD8;
 
-  /* Gradient buttons — teal→sage (pôvodné) */
+  /* Gradient buttons — teal→sage (zachované) */
   --teal:        #2B8A8A;
   --teal-dark:   #1C6B6B;
   --sage:        #5A9BBF;
@@ -53,7 +53,7 @@ ul{list-style:none}
 button{cursor:pointer;font-family:var(--font-sans)}
 
 /* ============================================================
-   NAVIGATION — tmavý (logo viditeľné)
+   NAVIGATION — svetlá pill na light hero
    ============================================================ */
 .nav{
   position:fixed;top:0;left:0;right:0;z-index:100;
@@ -64,18 +64,18 @@ button{cursor:pointer;font-family:var(--font-sans)}
 .nav-pill{
   pointer-events:all;
   display:flex;align-items:center;gap:0;
-  background:rgba(13,28,42,0.82);
+  background:rgba(255,255,255,0.88);
   backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);
-  border:1px solid rgba(255,255,255,0.10);
+  border:1px solid rgba(43,127,191,0.15);
   border-radius:100px;
   padding:0.5rem 0.5rem 0.5rem 1rem;
-  box-shadow:0 4px 24px rgba(0,0,0,0.30);
+  box-shadow:0 4px 24px rgba(19,38,58,0.10);
   transition:background var(--ease),box-shadow var(--ease);
   max-width:900px;width:100%;
 }
 .nav.scrolled .nav-pill{
-  background:rgba(13,28,42,0.95);
-  box-shadow:0 8px 32px rgba(0,0,0,0.40);
+  background:rgba(255,255,255,0.97);
+  box-shadow:0 8px 32px rgba(19,38,58,0.14);
 }
 .nav-logo-link{flex-shrink:0;margin-right:1.25rem;line-height:0;overflow:visible;display:flex;align-items:center}
 .nav-logo-link img{height:36px;width:auto;max-width:none;display:block;flex-shrink:0}
@@ -83,12 +83,12 @@ button{cursor:pointer;font-family:var(--font-sans)}
 .nav-links li a{
   display:block;
   font-size:0.73rem;font-weight:600;letter-spacing:0.09em;
-  text-transform:uppercase;color:rgba(255,255,255,0.70);
+  text-transform:uppercase;color:var(--gray-600);
   padding:0.5rem 0.85rem;border-radius:100px;
   transition:color var(--ease),background var(--ease);
   white-space:nowrap;
 }
-.nav-links li a:hover{color:var(--white);background:rgba(255,255,255,0.08)}
+.nav-links li a:hover{color:var(--dark);background:var(--blue-light)}
 .nav-cta-mobile{display:none}
 .nav-cta{
   flex-shrink:0;margin-left:0.5rem;
@@ -98,9 +98,9 @@ button{cursor:pointer;font-family:var(--font-sans)}
   font-size:0.73rem;letter-spacing:0.07em;
   text-transform:uppercase;white-space:nowrap;
   transition:transform var(--ease),box-shadow var(--ease),opacity var(--ease);
-  box-shadow:0 4px 16px rgba(43,138,138,0.35);
+  box-shadow:0 4px 16px rgba(43,138,138,0.30);
 }
-.nav-cta:hover{opacity:0.90;transform:translateY(-1px);box-shadow:0 8px 24px rgba(43,138,138,0.45)}
+.nav-cta:hover{opacity:0.90;transform:translateY(-1px);box-shadow:0 8px 24px rgba(43,138,138,0.40)}
 .nav-hamburger{
   display:none;background:none;border:none;
   flex-direction:column;gap:5px;padding:8px;margin-left:auto;
@@ -108,7 +108,7 @@ button{cursor:pointer;font-family:var(--font-sans)}
 }
 .nav-hamburger span{
   display:block;width:20px;height:1.5px;
-  background:rgba(255,255,255,0.80);border-radius:2px;transition:var(--ease);
+  background:var(--dark);border-radius:2px;transition:var(--ease);
 }
 .mobile-menu{
   display:none;position:fixed;top:0;left:0;right:0;bottom:0;
@@ -175,13 +175,15 @@ section{padding:var(--sp)}
 .reveal-d4{transition-delay:.4s}
 
 /* ============================================================
-   HERO — zachovaný tmavý (fotka na pozadí)
+   HERO — LIGHT THEME
+   Biela/svetlo-modrá pozadie, tmavý text, foto v ráme
    ============================================================ */
 .hero{
-  position:relative;height:100svh;max-height:100svh;
+  position:relative;
+  min-height:100svh;
   display:flex;align-items:flex-start;
-  padding:6rem 2rem 2.5rem;overflow:hidden;
-  background:#1A3348;
+  padding:6rem 2rem 3rem;overflow:hidden;
+  background:var(--off-white);
 }
 .hero-inner{
   position:relative;z-index:2;
@@ -192,10 +194,9 @@ section{padding:var(--sp)}
 .hero-photo-col{position:relative;padding-bottom:1rem;padding-top:0.5rem;display:flex;flex-direction:column;justify-content:center}
 .hero-frame{
   position:relative;border-radius:20px;overflow:hidden;
-  background:rgba(255,255,255,.06);
-  border:1px solid rgba(255,255,255,.15);
-  backdrop-filter:blur(2px);
-  box-shadow:0 32px 80px rgba(0,0,0,.4),0 0 0 1px rgba(255,255,255,.08);
+  background:var(--blue-light);
+  border:1px solid var(--blue-mid);
+  box-shadow:0 32px 80px rgba(19,38,58,0.14),0 0 0 1px rgba(43,127,191,0.08);
   aspect-ratio:16/18;
   max-height:calc(100svh - 10rem);
 }
@@ -203,10 +204,10 @@ section{padding:var(--sp)}
 .hero-rating-badge{
   position:absolute;bottom:-.25rem;left:50%;transform:translateX(-50%);
   display:flex;align-items:center;gap:1rem;
-  background:rgba(255,255,255,0.95);backdrop-filter:blur(20px);
+  background:rgba(255,255,255,0.97);backdrop-filter:blur(20px);
   border:1px solid var(--gray-200);border-radius:100px;
   padding:.6rem 1rem;white-space:nowrap;max-width:90%;
-  box-shadow:0 8px 32px rgba(19,38,58,.15);z-index:2;
+  box-shadow:0 8px 32px rgba(19,38,58,0.12);z-index:2;
 }
 .hero-rating-score{
   font-family:var(--font-serif);font-size:1.6rem;font-weight:300;
@@ -216,35 +217,42 @@ section{padding:var(--sp)}
 .hero-rating-label{font-size:.62rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--blue)}
 .hero-rating-count{font-size:.7rem;color:var(--gray-400)}
 .hero-text-col{display:flex;flex-direction:column;justify-content:center}
+
+/* Dekoratívne svetlo-modré pozadie s jemným gradientom */
 .hero-img-placeholder{
   position:absolute;inset:0;z-index:0;
-  background:linear-gradient(135deg,#0e1c2a 0%,#1a3348 45%,#0d1e2e 100%);
+  background:linear-gradient(135deg,var(--off-white) 0%,var(--blue-light) 55%,#D6EDF8 100%);
 }
 .hero-img{
   position:absolute;inset:0;width:100%;height:100%;
   object-fit:cover;object-position:center;z-index:0;
 }
+/* Overlay — veľmi jemný, len pre hĺbku */
 .hero-overlay{
   position:absolute;inset:0;z-index:1;
-  background:linear-gradient(180deg,rgba(13,28,42,.30) 0%,rgba(13,28,42,.08) 40%,rgba(13,28,42,.75) 100%);
+  background:linear-gradient(180deg,rgba(247,250,253,0.20) 0%,rgba(235,244,251,0.05) 60%,rgba(235,244,251,0.15) 100%);
 }
+
+/* Text — tmavý */
 .hero-tag{
   display:inline-flex;align-items:center;gap:0.6rem;
   font-size:0.72rem;font-weight:600;letter-spacing:0.16em;
-  text-transform:uppercase;color:rgba(255,255,255,.75);margin-bottom:1.5rem;
+  text-transform:uppercase;color:var(--blue);margin-bottom:1.5rem;
 }
-.hero-tag::before{content:"";display:block;width:28px;height:1px;background:rgba(255,255,255,.5)}
+.hero-tag::before{content:"";display:block;width:28px;height:1px;background:var(--blue-mid)}
 .hero h1{
   font-family:var(--font-serif);font-weight:300;
   font-size:clamp(2.2rem,4.5vw,4.2rem);
-  line-height:1.08;color:var(--white);margin-bottom:1.375rem;letter-spacing:-0.01em;
+  line-height:1.08;color:var(--dark);margin-bottom:1.375rem;letter-spacing:-0.01em;
 }
-.hero h1 em{font-style:italic;color:#7EC8E3}
+.hero h1 em{font-style:italic;color:var(--blue)}
 .hero-sub{
   font-size:clamp(1rem,1.4vw,1.2rem);font-weight:300;
-  color:rgba(255,255,255,.72);max-width:520px;
+  color:var(--gray-600);max-width:520px;
   margin-bottom:1.75rem;line-height:1.7;
 }
+
+/* Ceny */
 .hero-actions{display:flex;align-items:center;flex-wrap:wrap;gap:1.25rem}
 .btn-primary{
   display:inline-flex;align-items:center;gap:0.5rem;
@@ -257,37 +265,41 @@ section{padding:var(--sp)}
 }
 .btn-primary:hover{opacity:0.90;transform:translateY(-3px);box-shadow:0 12px 36px rgba(43,138,138,.50)}
 .btn-primary svg{width:16px;height:16px;flex-shrink:0}
+
 .hero-micro{
-  font-size:0.77rem;color:rgba(255,255,255,.5);letter-spacing:.04em;
+  font-size:0.77rem;color:var(--gray-400);letter-spacing:.04em;
   display:flex;align-items:center;gap:0.5rem;
 }
-.hero-micro::before{content:"✓";color:#7EC8E3;font-size:0.8rem}
+.hero-micro::before{content:"✓";color:var(--teal);font-size:0.8rem}
+
 .hero-price-row{
   display:flex;align-items:center;gap:1.25rem;
   margin:1.5rem 0 1.25rem;
   padding:1.1rem 1.25rem;
-  background:rgba(255,255,255,.08);
-  border:1px solid rgba(255,255,255,.14);
+  background:var(--white);
+  border:1px solid var(--gray-200);
   border-radius:14px;
-  backdrop-filter:blur(8px);
+  box-shadow:0 2px 12px rgba(19,38,58,0.06);
 }
 .hero-price-item{display:flex;align-items:baseline;gap:.35rem;flex-wrap:wrap}
-.hero-price-from{font-size:.65rem;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.08em;align-self:center}
-.hero-price-val{font-family:var(--font-serif);font-size:1.6rem;font-weight:300;color:var(--white);line-height:1}
-.hero-price-label{font-size:.65rem;color:rgba(255,255,255,.5);line-height:1.4;align-self:center}
-.hero-price-label small{display:block;color:rgba(255,255,255,.35)}
-.hero-price-divider{width:1px;height:36px;background:rgba(255,255,255,.15);flex-shrink:0}
+.hero-price-from{font-size:.65rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:.08em;align-self:center}
+.hero-price-val{font-family:var(--font-serif);font-size:1.6rem;font-weight:300;color:var(--dark);line-height:1}
+.hero-price-label{font-size:.65rem;color:var(--gray-400);line-height:1.4;align-self:center}
+.hero-price-label small{display:block;color:var(--gray-400)}
+.hero-price-divider{width:1px;height:36px;background:var(--gray-200);flex-shrink:0}
+
 .hero-trust-row{display:flex;flex-wrap:wrap;gap:.75rem;margin-bottom:1.5rem}
 .hero-trust-item{
   display:inline-flex;align-items:center;gap:.4rem;
   font-size:.7rem;font-weight:500;letter-spacing:.04em;
-  color:rgba(255,255,255,.6);
+  color:var(--gray-600);
 }
-.hero-trust-item svg{color:#7EC8E3;flex-shrink:0}
+.hero-trust-item svg{color:var(--teal);flex-shrink:0}
+
 .hero-scroll-line{
   position:absolute;bottom:0;left:50%;transform:translateX(-50%);
   width:1px;height:60px;z-index:2;
-  background:linear-gradient(to bottom,rgba(255,255,255,.3),transparent);
+  background:linear-gradient(to bottom,var(--blue-mid),transparent);
   animation:pulse 2.5s ease-in-out infinite;
 }
 @keyframes pulse{0%,100%{opacity:1;transform:translateX(-50%) scaleY(1)}50%{opacity:.4;transform:translateX(-50%) scaleY(.6)}}
@@ -395,7 +407,7 @@ section{padding:var(--sp)}
 }
 
 /* ============================================================
-   LOCATION — svetlá (biela bg, tmavý text, modrá mapa border)
+   LOCATION — off-white bg
    ============================================================ */
 .location{background:var(--off-white)}
 .location .section-label{color:var(--blue)}
@@ -478,7 +490,7 @@ section{padding:var(--sp)}
 .review-source::before{content:"";display:block;width:14px;height:1px;background:currentColor}
 
 /* ============================================================
-   BOOKING — svetlá modrá bg (dostatočný kontrast pre Previo widget)
+   BOOKING — svetlá modrá bg
    ============================================================ */
 .booking{background:var(--blue-light)}
 .booking .section-label{color:var(--blue)}
@@ -574,7 +586,7 @@ section{padding:var(--sp)}
 .ota-img{height:22px;width:auto;max-width:110px;object-fit:contain;display:block}
 
 /* ============================================================
-   FOOTER — svetlá modrá (nie tmavá, zachovaný kontrast)
+   FOOTER — tmavý (kontrast pre text)
    ============================================================ */
 .site-footer{background:var(--dark);color:rgba(255,255,255,.55);font-size:.85rem}
 .footer-top{padding:4rem 0 3rem}
@@ -659,7 +671,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--blue);outline-offse
 }
 
 @media(max-width:900px){
-  .hero{padding:8rem 1.5rem 3rem;align-items:flex-start;height:100svh;overflow:hidden}
+  .hero{padding:8rem 1.5rem 3rem;align-items:flex-start;min-height:100svh;overflow:hidden}
   .hero-inner{grid-template-columns:1fr;gap:1.5rem}
   .hero-text-col{order:-1}
   .hero-photo-col{display:none}
@@ -686,7 +698,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--blue);outline-offse
   }
   .nav-cta-mobile:hover{opacity:0.85}
   .nav-hamburger{display:flex}
-  .nav-hamburger span{background:rgba(255,255,255,0.80)}
+  .nav-hamburger span{background:var(--dark)}
   .amenities-grid{grid-template-columns:repeat(2,1fr)}
   .why-grid{grid-template-columns:repeat(2,1fr)}
   .reviews-grid{grid-template-columns:repeat(2,1fr)}
