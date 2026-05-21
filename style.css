@@ -615,9 +615,36 @@ section{padding:var(--sp)}
 }
 .footer-brand-name span{font-weight:300;font-size:.9rem;opacity:.7}
 .footer-brand-tagline{font-size:.78rem;color:rgba(255,255,255,.4);margin-bottom:1.25rem;line-height:1.6}
-.footer-langs{display:flex;align-items:center;gap:.3rem;flex-wrap:nowrap}
-.footer-langs-label{font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-right:.1rem}
-.lang-pill{font-size:.7rem;font-weight:600;padding:.2rem .55rem;border-radius:100px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.5)}
+
+/* JAZYKOVÉ VLAJKY — všetky na jednej vodorovnej línii */
+.footer-langs{
+  display:flex;
+  align-items:center;
+  gap:.3rem;
+  flex-wrap:nowrap;
+}
+.footer-langs-label{
+  font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;
+  color:rgba(255,255,255,.3);
+  margin-right:.25rem;
+  white-space:nowrap;
+  flex-shrink:0;
+}
+.lang-pill{
+  display:inline-flex;
+  align-items:center;
+  gap:.2rem;
+  font-size:.7rem;font-weight:600;
+  padding:.25rem .55rem;
+  border-radius:100px;
+  background:rgba(255,255,255,.07);
+  border:1px solid rgba(255,255,255,.12);
+  color:rgba(255,255,255,.55);
+  white-space:nowrap;
+  flex-shrink:0;
+  line-height:1;
+}
+
 .footer-col{}
 .footer-col-label{
   font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
@@ -729,7 +756,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold-deep);outline-
   .reviews-grid{grid-template-columns:1fr}
   .loc-grid{grid-template-columns:1fr}
   .footer-langs{flex-wrap:nowrap}
-  .lang-pill{font-size:.6rem;padding:.15rem .4rem}
+  .lang-pill{font-size:.6rem;padding:.18rem .4rem}
   .footer-langs-label{font-size:.55rem}
 }
 
@@ -775,7 +802,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold-deep);outline-
   .footer-brand{width:100%;overflow:visible}
   .footer-logo-link img{width:56px;height:56px}
   .footer-langs{flex-wrap:nowrap;gap:.25rem}
-  .lang-pill{font-size:.58rem;padding:.12rem .35rem}
+  .lang-pill{font-size:.58rem;padding:.15rem .38rem}
   .footer-langs-label{font-size:.52rem;white-space:nowrap}
 }
 
