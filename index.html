@@ -31,7 +31,6 @@
     <ul class="nav-links">
       <li><a href="#rooms">Izby</a></li>
       <li><a href="#amenities">Vybavenie</a></li>
-      <li><a href="#bar">The Space Bar</a></li>
       <li><a href="#location">Poloha</a></li>
       <li><a href="#reviews">Hodnotenia</a></li>
       <li><a href="#contact">Kontakt</a></li>
@@ -52,7 +51,6 @@
   </button>
   <a href="#rooms" class="mobile-menu-link">Izby</a>
   <a href="#amenities" class="mobile-menu-link">Vybavenie</a>
-  <a href="#bar" class="mobile-menu-link">The Space Bar</a>
   <a href="#location" class="mobile-menu-link">Poloha</a>
   <a href="#reviews" class="mobile-menu-link">Hodnotenia</a>
   <a href="#contact" class="mobile-menu-link">Kontakt</a>
@@ -316,11 +314,7 @@
         <div><div class="amenity-label">Klimatizácia</div><div class="amenity-desc">Nezávislá v každej izbe</div></div>
       </div>
       <div class="amenity-item">
-        <div class="amenity-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2h8l1 8H7L8 2z"/><path d="M12 10v12"/><path d="M9 22h6"/></svg></div>
-        <div><div class="amenity-label">The Space Biohacking Bar</div><div class="amenity-desc">Prvý nealkoholický biohack bar na SK — priamo v budove</div></div>
-      </div>
-      <div class="amenity-item">
-        <div class="amenity-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 17V7h4a3 3 0 0 1 0 6H9"/></svg></div>
+        <div class="amenity-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
         <div><div class="amenity-label">Parkovisko</div><div class="amenity-desc">Parkovanie na mieste k dispozícii</div></div>
       </div>
       <div class="amenity-item">
@@ -339,7 +333,11 @@
         <div class="amenity-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16a1 1 0 0 1 1 1v3a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4v-3a1 1 0 0 1 1-1z"/><path d="M6 12V5a2 2 0 0 1 2-2h3v2.25"/></svg></div>
         <div><div class="amenity-label">Súkromná kúpeľňa</div><div class="amenity-desc">Rainfall sprcha v každej kúpeľni</div></div>
       </div>
-          </div>
+      <div class="amenity-item">
+        <div class="amenity-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <div><div class="amenity-label">Centrum Bratislavy</div><div class="amenity-desc">Staré Mesto — všetko pešo</div></div>
+      </div>
+    </div>
     <div class="amenity-note reveal">
       🐾 Domáce zvieratá vítané &mdash; príplatok &euro;15 / zviera / pobyt
     </div>
@@ -347,10 +345,8 @@
 </section>
 
 
-<!-- ============================================================
-     THE SPACE BIOHACKING BAR
-     ============================================================ -->
-<section class="bar-section" id="bar" aria-labelledby="bar-heading">
+<!-- THE SPACE BAR — skrytá sekcia (dočasne zatvorený) -->
+<section class="bar-section" id="bar" aria-labelledby="bar-heading" style="display:none" aria-hidden="true">
   <div class="bar-bg-pattern" aria-hidden="true"></div>
   <div class="container">
 
@@ -406,7 +402,6 @@
       </div>
 
       <div class="bar-photo-wrap reveal" aria-label="Fotografia baru">
-        <!-- BAR PHOTO — replace src with real photo -->
         <img src="https://blue-lotus.sk/photos/the-space-bar.jpg" alt="The Space Biohacking Bar" class="bar-photo">
         <div class="bar-photo-placeholder">
           <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:rgba(78,205,196,.3)"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
@@ -779,7 +774,7 @@
               <a href="mailto:contact@blue-lotus.sk">contact@blue-lotus.sk</a>
             </li>
             <li>
-              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.24h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 15z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="true" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.24h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 15z"/></svg>
               <a href="tel:+421948315631">0948 315 631</a>
             </li>
             <li>
@@ -793,7 +788,6 @@
           <div class="footer-col-label">Rýchle linky</div>
           <ul class="footer-list footer-nav-list">
             <li><a href="#rooms">Izby &amp; ceny</a></li>
-            <li><a href="#bar">The Space Biohacking Bar</a></li>
             <li><a href="#location">Poloha</a></li>
             <li><a href="#reviews">Hodnotenia hostí</a></li>
             <li><a href="#booking">Rezervovať priamo</a></li>
